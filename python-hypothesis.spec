@@ -46,4 +46,4 @@ rm -rf tests/nocover
 %files
 %license LICENSE.txt
 %doc README.rst
-%{python_sitelib}/*
+#{python_sitelib}/*
