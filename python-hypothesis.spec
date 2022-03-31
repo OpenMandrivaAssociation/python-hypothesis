@@ -2,7 +2,7 @@
 
 Name:           python-%{srcname}
 Version:        5.3.1
-Release:        1
+Release:        2
 Summary:        A library for property based testing
 Group:          Development/Python
 License:        MPLv2.0
@@ -47,3 +47,7 @@ rm -rf tests/nocover
 %license LICENSE.txt
 %doc README.rst
 #{python_sitelib}/*
+%{python_sitelib}/hypothesis-%{version}-py*.*.egg-info
+%{python_sitelib}/hypothesis
+
+
