@@ -2,7 +2,7 @@
 
 Name:           python-%{srcname}
 Version:        5.3.1
-Release:        2
+Release:        3
 Summary:        A library for property based testing
 Group:          Development/Python
 License:        MPLv2.0
