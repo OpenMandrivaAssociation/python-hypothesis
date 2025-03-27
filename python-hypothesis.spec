@@ -1,8 +1,8 @@
 %define srcname hypothesis
 
 Name:           python-%{srcname}
-Version:        5.3.1
-Release:        3
+Version:        6.130.4
+Release:        1
 Summary:        A library for property based testing
 Group:          Development/Python
 License:        MPLv2.0
@@ -45,9 +45,7 @@ rm -rf tests/nocover
 
 %files
 %license LICENSE.txt
-%doc README.rst
-#{python_sitelib}/*
+%{_bindir}/hypothesis
 %{python_sitelib}/hypothesis-%{version}-py*.*.egg-info
+%{python_sitelib}/_*.py
 %{python_sitelib}/hypothesis
-
-
