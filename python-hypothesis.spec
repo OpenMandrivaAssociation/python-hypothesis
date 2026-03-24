@@ -1,20 +1,22 @@
-%define srcname hypothesis
+%define module hypothesis
 
-Name:           python-%{srcname}
-Version:        6.148.7
-Release:        1
-Summary:        A library for property based testing
-Group:          Development/Python
-License:        MPLv2.0
-URL:            https://github.com/HypothesisWorks/hypothesis
-Source0:        https://pypi.io/packages/source/h/hypothesis/%{srcname}-%{version}.tar.gz
-BuildArch:      noarch
+Name:		python-hypothesis
+Version:	6.151.9
+Release:	1
+Summary:	A library for property based testing
+Group:		Development/Python
+License:	MPLv2.0
+URL:		https://github.com/HypothesisWorks/hypothesis
+Source0:	https://pypi.io/packages/source/h/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildSystem:	python
-BuildRequires:  pkgconfig(python)
-BuildRequires:  python%{pyver}dist(setuptools)
-Recommends:     python%{pyver}dist(numpy)
-Recommends:     python%{pyver}dist(pytz)
+BuildArch:	noarch
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
+Recommends:	python%{pyver}dist(numpy)
+Recommends:	python%{pyver}dist(pytz)
 
 %description
 Hypothesis is a library for testing your Python code against a much
@@ -24,7 +26,7 @@ to integrate seamlessly into your existing Python unit testing work
 flow.
 
 %prep -a
-rm -rf src/%{srcname}.egg-info
+rm -rf src/%{module}.egg-info
 
 # remove Django tests for now
 rm -rf tests/django
@@ -39,6 +41,6 @@ rm -rf tests/nocover
 %license LICENSE.txt
 %{_bindir}/hypothesis
 %{python_sitelib}/__pycache__/*
-%{python_sitelib}/hypothesis-%{version}.dist-info
 %{python_sitelib}/_*.py
-%{python_sitelib}/hypothesis
+%{python_sitelib}/%{module}
+%{python_sitelib}/%{module}-%{version}.dist-info
