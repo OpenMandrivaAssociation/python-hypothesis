@@ -1,7 +1,7 @@
 %define module hypothesis
 
 Name:		python-hypothesis
-Version:	6.152.1
+Version:	6.152.2
 Release:	1
 Summary:	A library for property based testing
 Group:		Development/Python
@@ -27,15 +27,6 @@ flow.
 
 %prep -a
 rm -rf src/%{module}.egg-info
-
-# remove Django tests for now
-rm -rf tests/django
-
-# remove fakefactory tests, not packaged yet
-rm -rf tests/fakefactory
-
-# remove slow tests
-rm -rf tests/nocover
 
 %files
 %license LICENSE.txt
