@@ -1,7 +1,7 @@
 %define module hypothesis
 
 Name:		python-hypothesis
-Version:	6.155.2
+Version:	6.164.0
 Release:	1
 Summary:	A library for property based testing
 Group:		Development/Python
