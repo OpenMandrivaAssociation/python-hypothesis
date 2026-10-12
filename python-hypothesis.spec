@@ -1,5 +1,8 @@
 %define module hypothesis
 
+# The Rust extension has no C sources for the debugsource package to list.
+%global _empty_manifest_terminate_build 0
+
 Name:		python-hypothesis
 Version:	6.169.0
 Release:	1
